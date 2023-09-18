@@ -13,9 +13,14 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 <p align="center">
 <em>Some examples of the visualizations that can be found in the dashboard</em>
 
-## Must-knows for The Dashboard
+## Must-knows
 
-### 1. Pitch Type Abbreviation
+### 1. IMPORTANT
+
+- Process raw trackman baseball data with "Add_necessary_columns.R".
+- Plotting estimated strike zones for umpires requires pitch-level data with umpire name. Ignore this tab if the user does not have access.
+
+### 2. Pitch Type Abbreviation
 
 | Pitch Type      | Abbreviation |
 | ----------- | ----------- |
@@ -27,13 +32,13 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 | Changeup   | CH        |
 | Splitter   | SP        |
 
-### 2. Tips
+### 3. Tips
 
 - Everytime the filters in the sidebar have been modified, be sure to hit the "Apply filter" to see the corresponding changes on the graphs. As for filters in the dashboard boxes, the changes will be applied automatically.
 - For every multiple-choice-possible filters, after all choices are unselected, they will all be automatically selected again.
 - Use "left", "right" and "backspace" keys when using multiple select boxes.
 
-### 3. Notes
+### 4. Notes
 
 - Expected weighted on-base average (xwOBA) value for each batted ball is given by the xwoba. RData file trained by the author. Find more about the model here {LINK!!!!!!!}
 - In the "Spray Charts" tab, one will find the filter "Part of the plate" with only two options, "Inside" and "Outside". This is subjective to the batter regardless of the batter handedness.
