@@ -19,12 +19,12 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 
 #### Users with their own trackman data
 - Process raw trackman baseball data with "Add_necessary_columns.R".
-- For plotting estimated strike zones of different umpires, your would have add an additional column "Umpire" to your pitch-level data.
+- For plotting estimated strike zones of different umpires, your would have to add an additional column "Umpire" to your pitch-level data.
 - You're ready to go!
 
 #### Users without data or just want a quick experience
 - Download the folder and you're good to go!
-- The game data provided by the author are collected in Opening Day 2023 of CPBL (Taiwanese pro league).
+- The game data provided by the author are collected is from Opening Day 2023 of CPBL (Taiwanese pro league).
 - The umpire data consist of every called strikes and balls from 2018 to 2023 in CPBL. However, these data are not open to public therefore the names of the umpires have been replaced by fake names.
 
 ### 2. Pitch Type Abbreviation
