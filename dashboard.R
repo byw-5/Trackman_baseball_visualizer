@@ -8,7 +8,7 @@ library(broom)
 library(modelr)
 
 data  <- read_csv("example_game_data.csv")
-ump_data <- read_csv("example_ump_data.csv")#Change path to your umpire data
+ump_data <- read_csv("example_ump_data.csv")
 
 ui <- dashboardPage(
   dashboardHeader(title = "Trackman Visualizer"),
@@ -1271,7 +1271,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide == "Left") %>% 
-      filter(PitchType == "F" ) 
+      filter(TaggedPitchType == "Fastball" | TaggedPitchType == "Cutter" | TaggedPitchType == "TwoSeamFastBall") 
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
@@ -1304,7 +1304,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide == "Left") %>% 
-      filter(PitchType != "F") 
+      filter(TaggedPitchType != "Fastball" & TaggedPitchType != "Cutter" & TaggedPitchType != "TwoSeamFastBall")
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
@@ -1338,7 +1338,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide != "Left") %>% 
-      filter(PitchType == "F") 
+      filter(TaggedPitchType == "Fastball" | TaggedPitchType == "Cutter" | TaggedPitchType == "TwoSeamFastBall")
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
@@ -1371,7 +1371,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide != "Left") %>% 
-      filter(PitchType != "F") 
+      filter(TaggedPitchType != "Fastball" & TaggedPitchType != "Cutter" & TaggedPitchType != "TwoSeamFastBall")
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
