@@ -7,8 +7,8 @@ library(mgcv)
 library(broom)
 library(modelr)
 
-data  <- read_csv("Updated.csv")
-ump_data <- read_csv("")#Change path to your umpire data
+data  <- read_csv("example_game_data.csv")
+ump_data <- read_csv("example_ump_data.csv")#Change path to your umpire data
 
 ui <- dashboardPage(
   dashboardHeader(title = "Trackman Visualizer"),
