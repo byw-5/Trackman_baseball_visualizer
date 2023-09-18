@@ -48,7 +48,7 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 
 ### 4. Notes
 
-- Expected weighted on-base average (xwOBA) value for each batted ball is given by the "xwoba.RData" model trained by the author. Find more about the model here {LINK!!!!!!!}.
-- A generalized additive model (GAM) for creating estimated strike zone is immediately trained after selecting the umpire in the sidebar. The code can also be found here {LINK!!!!!!!}.
+- Expected weighted on-base average (xwOBA) value for each batted ball is given by the "xwoba.RData" model trained by the author. Find more about the model [here](https://github.com/byw-5/expected-wOBA) .
+- A generalized additive model (GAM) for creating estimated strike zone is immediately trained after selecting the umpire in the sidebar. Most of the code came from [**Analyzing Baseball Data with R**](https://www.amazon.com/Analyzing-Baseball-Data-Second-Chapman/dp/0815353510). Fantastic read.
 - In the "Spray Charts" tab, one will find the filter "Part of the plate" with only two options, "Inside" and "Outside". This is subjective to the batter regardless of the batter handedness.
   
