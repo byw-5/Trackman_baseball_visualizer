@@ -1271,7 +1271,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide == "Left") %>% 
-      filter(TaggedPitchType == "Fastball" | TaggedPitchType == "Cutter" | TaggedPitchType == "TwoSeamFastBall") 
+      filter(AutoPitchType == "Fastball" | AutoPitchType == "Cutter" | AutoPitchType == "TwoSeamFastBall") 
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
@@ -1304,7 +1304,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide == "Left") %>% 
-      filter(TaggedPitchType != "Fastball" & TaggedPitchType != "Cutter" & TaggedPitchType != "TwoSeamFastBall")
+      filter(AutoPitchType != "Fastball" & AutoPitchType != "Cutter" & AutoPitchType != "TwoSeamFastBall")
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
@@ -1338,7 +1338,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide != "Left") %>% 
-      filter(TaggedPitchType == "Fastball" | TaggedPitchType == "Cutter" | TaggedPitchType == "TwoSeamFastBall")
+      filter(AutoPitchType == "Fastball" | AutoPitchType == "Cutter" | AutoPitchType == "TwoSeamFastBall")
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
@@ -1371,7 +1371,7 @@ server <- function(input, output, session) {
     u_data <- all %>% 
       filter(PitchCall == "StrikeCalled" | PitchCall == "BallCalled") %>% 
       filter(BatterSide != "Left") %>% 
-      filter(TaggedPitchType != "Fastball" & TaggedPitchType != "Cutter" & TaggedPitchType != "TwoSeamFastBall")
+      filter(AutoPitchType != "Fastball" & AutoPitchType != "Cutter" & AutoPitchType != "TwoSeamFastBall")
     
     strike_mod <- gam(PitchCall == "StrikeCalled" ~ s(PlateLocSide, PlateLocHeight),
                       family = binomial, data = u_data)
