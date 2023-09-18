@@ -37,7 +37,7 @@ data4 <- combined_df %>%
 data5 <- combined_df %>% 
   filter((is.na(ExitSpeed) == T | is.na(ExitSpeed) == T) | PitchCall != "InPlay")
 
-load("/Users/wangminying/Desktop/Shiny_dashboard/xwoba.RData")
+load("xwoba.RData")
 
 data3$xwoba <-  predict(rf_classifier, newdata = data3)
 
