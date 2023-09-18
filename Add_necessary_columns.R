@@ -129,4 +129,4 @@ combined_df <- combined_df %>%
   )) 
 
 
-write.csv(combined_df,"example_game_data.csv")
+write.csv(combined_df,"example_game_data.csv", row.names = F)
