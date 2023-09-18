@@ -47,6 +47,6 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 
 ### 4. Notes
 
-- Expected weighted on-base average (xwOBA) value for each batted ball is given by the xwoba. RData file trained by the author. Find more about the model here {LINK!!!!!!!}
+- Expected weighted on-base average (xwOBA) value for each batted ball is given by the "xwoba.RData" model trained by the author. Find more about the model here {LINK!!!!!!!}.
 - In the "Spray Charts" tab, one will find the filter "Part of the plate" with only two options, "Inside" and "Outside". This is subjective to the batter regardless of the batter handedness.
   
