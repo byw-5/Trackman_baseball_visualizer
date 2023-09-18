@@ -15,10 +15,17 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 
 ## Must-knows
 
-### 1. IMPORTANT
+### 1. STEPS
 
+#### Users with their own trackman data
 - Process raw trackman baseball data with "Add_necessary_columns.R".
-- Plotting estimated strike zones for umpires requires pitch-level data with umpire name. Ignore this tab if the user does not have access.
+- For plotting estimated strike zones of different umpires, your would have add an additional column "Umpire" to your pitch-level data.
+- You're ready to go!
+
+#### Users without data or just want a quick experience
+- Download the folder and you're good to go!
+- The game data provided by the author are collected in Opening Day 2023 of CPBL (Taiwanese pro league).
+- The umpire data consist of every called strikes and balls from 2018 to 2023 in CPBL. However, these data are not open to public therefore the names of the umpires have been replaced by fake names.
 
 ### 2. Pitch Type Abbreviation
 
@@ -42,6 +49,4 @@ It is easy and intuitive, transform your trackman data and take your analysis ga
 
 - Expected weighted on-base average (xwOBA) value for each batted ball is given by the xwoba. RData file trained by the author. Find more about the model here {LINK!!!!!!!}
 - In the "Spray Charts" tab, one will find the filter "Part of the plate" with only two options, "Inside" and "Outside". This is subjective to the batter regardless of the batter handedness.
-- If the user doesn't have access to any trackman baseball data but still want play with the app, the author provides the trackman data from CPBL (Taiwanese pro league) Opening Day 2023, "example_trackman_data.csv". It does not need to be processed by "Add_necessary_columns.R".
-- The data in "Ump_data.csv" are collected from CPBL as well. However, these data are not open to public therefore the names of the umpires have been replaced by fake names.
   
